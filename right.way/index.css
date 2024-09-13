@@ -1,0 +1,57 @@
+:root{
+    --div_color:rgba(7, 0, 0, 1);
+}
+.container{
+    display:flex;
+    border: 1px solid black;
+    height: 100px;
+    width: 90%;
+    margin: auto;
+    border-radius:5px;
+    padding:1px;
+    margin:10px;
+    font-size:16px;
+    gap:10px;
+    background-color: var(--div_color);
+    color: white;
+}
+.left{
+    height: 98px;
+   width: 180px;
+
+    
+}
+.image{
+    border:none;
+    border-radius: 5px;
+    
+   max-height: 100%;
+    
+}
+.right{
+    display:flex;
+    flex-direction:column;
+    gap:10px
+}
+.information{
+    display:flex;
+
+   gap:5px;
+    
+}
+
+.dot_svg{
+    height: 25px;
+}
+.in_video{
+    padding: 5px;
+    border: 1px solid black;
+    width: 50vw;
+    margin: 5px 50px;
+}
+.user{
+    display: flex;
+    flex-direction:column;
+    gap:10px
+    
+}
