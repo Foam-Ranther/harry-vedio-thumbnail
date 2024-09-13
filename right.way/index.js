@@ -1,4 +1,20 @@
 function makevideo(image_link,title,channel_name,channel_link,views,months_old){
+    let initial=views/1000;
+    if(initial<1){
+        views=views;
+    }
+    else if (1<=initial<1000){
+        views=`${initial}k`;
+    }
+    else if (1000<=initial<1000000){
+        initial=initial/1000;
+        views=`${initial}M`;
+    }
+    else{
+        initial=initial/1000000;
+        views=`${initial}B`
+    }
+
     let element=document.createElement('div');
     element.classList.add('container');
 
@@ -7,7 +23,7 @@ function makevideo(image_link,title,channel_name,channel_link,views,months_old){
 
     let ele_image=document.createElement('img');
     ele_image.classList.add('image');
-    ele_image.setAttribute('href',`${image_link}`);
+    ele_image.setAttribute('src',`${image_link}`);
     ele_image.setAttribute('alt',`the image `);
 
     let ele_right=document.createElement('div');
@@ -43,6 +59,6 @@ function makevideo(image_link,title,channel_name,channel_link,views,months_old){
     ele_info.appendChild(ele_monthsold);
 }
 document.addEventListener('DOMContentLoaded',()=>{
-    makevideo();
+    makevideo('imagesecond.webp','this is harry bhai second video','codeWithHarry','default','4000000','7 months');
     
 });
