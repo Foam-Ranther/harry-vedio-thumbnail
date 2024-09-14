@@ -51,11 +51,11 @@ function makevideo(image_link,title,channel_name,channel_link,views,months_old){
     
 
     let ele_views=document.createElement('div');
-    ele_views.innerText=`${views}`;
+    ele_views.innerText=`${views} views`;
 
 
     let ele_monthsold=document.createElement('div');
-    ele_monthsold.innerText=`${months_old}`;
+    ele_monthsold.innerText=`${months_old} months ago`;
     
     document.querySelector('.video_div').appendChild(element);
     element.appendChild(ele_left);
@@ -70,6 +70,6 @@ function makevideo(image_link,title,channel_name,channel_link,views,months_old){
     ele_info.appendChild(ele_monthsold);
 }
 document.addEventListener('DOMContentLoaded',()=>{
-    makevideo('imagesecond.webp','this is harry bhai second video','codeWithHarry','https://www.youtube.com/@CodeWithHarry','2000000000','7 months');
+    makevideo('imagesecond.webp','this is harry bhai second video','codeWithHarry','https://www.youtube.com/@CodeWithHarry','2000000000','7');
     
 });
