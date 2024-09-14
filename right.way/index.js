@@ -1,14 +1,19 @@
 function makevideo(image_link,title,channel_name,channel_link,views,months_old){
     let initial=views/1000;
+    console.log(initial);
     if(initial<1){
         views=views;
     }
-    else if (1<=initial<1000){
+    else if (1<=initial && initial<1000){
+        console.log(`this is the intitial value inside the if statement ${initial}`);
+        
         views=`${initial}k`;
     }
-    else if (1000<=initial<1000000){
-        initial=initial/1000;
-        views=`${initial}M`;
+    else if (1000<=initial && initial<1000000){
+        console.log(`why are we not here ? ${initial}`);
+        
+        let second=initial/1000;
+        views=`${second}M`;
     }
     else{
         initial=initial/1000000;
@@ -38,8 +43,12 @@ function makevideo(image_link,title,channel_name,channel_link,views,months_old){
 
     let ele_channel_name=document.createElement('a');
    ele_channel_name.setAttribute('href',`${channel_link}`);
+   ele_channel_name.setAttribute('target','_blank')
    ele_channel_name.innerText=`${channel_name}`;
 
+    let ele_svg=document.createElement('img');
+    ele_svg.setAttribute('src','dot-small-svgrepo-com(1).svg')
+    
 
     let ele_views=document.createElement('div');
     ele_views.innerText=`${views}`;
@@ -55,10 +64,12 @@ function makevideo(image_link,title,channel_name,channel_link,views,months_old){
     ele_right.appendChild(ele_title)
     ele_right.appendChild(ele_info);
     ele_info.appendChild(ele_channel_name);
+    ele_info.appendChild(ele_svg);
     ele_info.appendChild(ele_views);
+    ele_info.appendChild(ele_svg);
     ele_info.appendChild(ele_monthsold);
 }
 document.addEventListener('DOMContentLoaded',()=>{
-    makevideo('imagesecond.webp','this is harry bhai second video','codeWithHarry','default','4000000','7 months');
+    makevideo('imagesecond.webp','this is harry bhai second video','codeWithHarry','https://www.youtube.com/@CodeWithHarry','2000000000','7 months');
     
 });
