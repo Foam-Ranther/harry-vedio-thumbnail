@@ -42,4 +42,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     console.log('this is inside dom');
     makeDiv('https://i.ytimg.com/vi/kJEsTjH5mVg/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB2CBsdfdhlYA7kZwtSfre44-Wx_g','23:12',"this is the second video","codeWithHarry","https://www.youtube.com/@CodeWithHarry",231,4);
     
+    makeDiv('https://i.ytimg.com/vi/kJEsTjH5mVg/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB2CBsdfdhlYA7kZwtSfre44-Wx_g','23:12',"this is the second video","codeWithHarry","https://www.youtube.com/@CodeWithHarry",231,4);
+    
+    
 });
